@@ -1,10 +1,16 @@
 services:
   backend:
+    restart: unless-stopped
     image: zoltus/example-backend
     ports:
       - "8080:8080"
+    environment:
+      REDIS_HOST: redis
 
   frontend:
     image: zoltus/example-frontend
     ports:
       - "5001:5001"
+
+  redis:
+    image: redis
