@@ -1,0 +1,10 @@
+services:
+  backend:
+    image: zoltus/example-backend
+    ports:
+      - "8080:8080"
+
+  frontend:
+    image: zoltus/example-frontend
+    ports:
+      - "5001:5001"
